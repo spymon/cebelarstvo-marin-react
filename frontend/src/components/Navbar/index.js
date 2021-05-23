@@ -1,9 +1,15 @@
 import React from 'react'
+import { Nav, NavbarContainer, NavLogo } from './NavbarElements'
 
 export const Navbar = () => {
   return (
-    <div>
-      <h1>Nav</h1>
-    </div>
+    <>
+      <Nav>
+        <NavbarContainer>
+          <NavLogo to="/">LOGO</NavLogo>
+          <h1>Hey</h1>
+        </NavbarContainer>
+      </Nav>
+    </>
   )
 }
