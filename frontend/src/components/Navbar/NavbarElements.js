@@ -24,7 +24,7 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 100px;
   z-index: 1;
   width: 100%;
   padding: 0 24px;
@@ -33,8 +33,6 @@ export const NavbarContainer = styled.div`
 
 // react router link
 export const NavLogoWrapper = styled(LinkR)`
-  position: relative;
-  top: -8px;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.1rem;
@@ -50,7 +48,7 @@ export const NavLogoImg = styled.img`
   padding: 0;
   vertical-align: middle;
   display: inline-block;
-  height: 87px;
+  height: 90px;
   user-select: none;
 `
 
@@ -62,7 +60,7 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 75%);
     color: #35363a;
     font-size: 1.8rem;
     cursor: pointer;
@@ -93,7 +91,7 @@ export const NavLinks = styled(LinkS)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding: 0.5rem 1rem;
   cursor: pointer;
 

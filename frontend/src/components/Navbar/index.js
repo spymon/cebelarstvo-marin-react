@@ -14,7 +14,7 @@ import {
   NavBtnLink,
 } from './NavbarElements'
 
-export const Navbar = () => {
+export const Navbar = ({ isopen, toggle }) => {
   return (
     <>
       <Nav>
@@ -22,7 +22,7 @@ export const Navbar = () => {
           <NavLogoWrapper to="/">
             <NavLogoImg src={logoImage} alt="Cebelarstvo marin" />
           </NavLogoWrapper>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <GoThreeBars />
           </MobileIcon>
           <NavMenu>
