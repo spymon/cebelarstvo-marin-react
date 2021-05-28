@@ -5,7 +5,7 @@ import { Link as LinkS } from 'react-scroll'
 export const Nav = styled.nav`
   background: #fff;
   height: 100px;
-  /* margin-top: -100px; */
+  margin-top: -100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +72,6 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  // margin-right: -22px;
 
   @media Screen and (max-width: 768px) {
     display: none;
