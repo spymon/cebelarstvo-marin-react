@@ -18,16 +18,47 @@ export const Sidebar = ({ toggle, isOpen }) => {
       </IconWrapper>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="products" onClick={toggle}>
+          <SidebarLink
+            to="products"
+            onClick={toggle}
+            smooth={true}
+            duration={300}
+            spy={true}
+            offset={-100}
+          >
             Izdelki
           </SidebarLink>
-          <SidebarLink to="gallery" onClick={toggle}>
+          <SidebarLink
+            to="gallery"
+            onClick={toggle}
+            smooth={true}
+            duration={300}
+            spy={true}
+            offset={-100}
+          >
+            {' '}
             Galerija
           </SidebarLink>
-          <SidebarLink to="about" onClick={toggle}>
+          <SidebarLink
+            to="about"
+            onClick={toggle}
+            smooth={true}
+            duration={300}
+            spy={true}
+            offset={-100}
+          >
+            {' '}
             O meni
           </SidebarLink>
-          <SidebarLink to="contact" onClick={toggle}>
+          <SidebarLink
+            to="contact"
+            onClick={toggle}
+            smooth={true}
+            duration={300}
+            spy={true}
+            offset={-100}
+          >
+            {' '}
             Kontakt
           </SidebarLink>
         </SidebarMenu>

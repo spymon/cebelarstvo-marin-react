@@ -93,9 +93,13 @@ export const NavLinks = styled(LinkS)`
   text-transform: capitalize;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.1s ease-in-out;
+  border-radius: 2px;
 
-  &:active {
-    border-bottom: 3px solid #35363a;
+  &.active {
+    border-bottom: 3px solid #f7d433;
+    transition: all 0.1s ease-in-out;
   }
 `
 
