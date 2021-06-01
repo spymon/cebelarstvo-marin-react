@@ -37,6 +37,7 @@ export const ProductMass = styled.p`
 `
 
 export const ProductBtn = styled.button`
+  color: #35363a;
   background-color: #f7d433;
   font-family: 'Prompt', sans-serif;
   font-weight: 500;

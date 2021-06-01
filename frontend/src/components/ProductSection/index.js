@@ -1,11 +1,12 @@
 import React from 'react'
+import { Container } from '../Container'
 import { HeadingH2 } from '../HeadingH2'
 import { ProductCard } from '../ProductCard'
-import { ProductContainer, ProductsWrapper } from './ProductElements'
+import { ProductsWrapper } from './ProductElements'
 
 export const ProductSection = () => {
   return (
-    <ProductContainer id="products">
+    <Container id="products">
       <HeadingH2 dark>Izdelki</HeadingH2>
       <ProductsWrapper>
         <ProductCard />
@@ -13,6 +14,6 @@ export const ProductSection = () => {
         <ProductCard />
         <ProductCard />
       </ProductsWrapper>
-    </ProductContainer>
+    </Container>
   )
 }

@@ -1,15 +1,5 @@
 import styled from 'styled-components'
 
-export const HeroContainer = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 30px;
-  height: 100vh;
-  width: 100%;
-`
-
 export const HeroBg = styled.div`
   position: absolute;
   top: 0;

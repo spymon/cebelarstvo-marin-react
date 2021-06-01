@@ -1,12 +1,5 @@
 import styled from 'styled-components'
 
-export const ProductContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 30px;
-  min-height: 200vh;
-`
 export const ProductsWrapper = styled.div`
   display: grid;
   width: 100%;

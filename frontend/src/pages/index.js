@@ -3,6 +3,7 @@ import { HeroSection } from '../components/HeroSection'
 import { Navbar } from '../components/Navbar'
 import { ProductSection } from '../components/ProductSection'
 import { Sidebar } from '../components/Sidebar'
+import { Gallery } from '../components/Gallery'
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,6 +16,7 @@ export const Home = () => {
       <Navbar toggle={toggle} />
       <HeroSection />
       <ProductSection />
+      <Gallery />
     </>
   )
 }

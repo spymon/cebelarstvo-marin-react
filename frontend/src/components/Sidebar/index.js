@@ -36,7 +36,6 @@ export const Sidebar = ({ toggle, isOpen }) => {
             spy={true}
             offset={-100}
           >
-            {' '}
             Galerija
           </SidebarLink>
           <SidebarLink
@@ -47,7 +46,6 @@ export const Sidebar = ({ toggle, isOpen }) => {
             spy={true}
             offset={-100}
           >
-            {' '}
             O meni
           </SidebarLink>
           <SidebarLink
@@ -58,7 +56,6 @@ export const Sidebar = ({ toggle, isOpen }) => {
             spy={true}
             offset={-100}
           >
-            {' '}
             Kontakt
           </SidebarLink>
         </SidebarMenu>

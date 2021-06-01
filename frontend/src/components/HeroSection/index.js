@@ -1,10 +1,10 @@
 import React from 'react'
 import heroBackground from '../../images/herobg.jpg'
 import { Button } from '../ButtonElement'
+import { Container } from '../Container'
 import {
   HeroBg,
   HeroBtnWrapper,
-  HeroContainer,
   HeroContent,
   HeroH1,
   HeroP,
@@ -13,7 +13,7 @@ import {
 
 export const HeroSection = () => {
   return (
-    <HeroContainer>
+    <Container center>
       <HeroBg>
         <ImageBg src={heroBackground} />
       </HeroBg>
@@ -36,6 +36,6 @@ export const HeroSection = () => {
           </Button>
         </HeroBtnWrapper>
       </HeroContent>
-    </HeroContainer>
+    </Container>
   )
 }
