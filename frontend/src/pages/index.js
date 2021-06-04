@@ -4,6 +4,7 @@ import { Navbar } from '../components/Navbar'
 import { ProductSection } from '../components/ProductSection'
 import { Sidebar } from '../components/Sidebar'
 import { Gallery } from '../components/Gallery'
+import { AboutSection } from '../components/AboutSection'
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,6 +18,7 @@ export const Home = () => {
       <HeroSection />
       <ProductSection />
       <Gallery />
+      <AboutSection />
     </>
   )
 }
