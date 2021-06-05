@@ -18,7 +18,7 @@ export const HeroSection = () => {
         <ImageBg src={heroBackground} />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Med, katerega si želi vsak!</HeroH1>
+        <HeroH1>Med, katerega si želi ti!</HeroH1>
         <HeroP>Velika izbira medenih izdelkov, pridelanih doma.</HeroP>
         <HeroBtnWrapper>
           <Button

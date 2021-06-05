@@ -36,5 +36,7 @@ export const AboutQuote = styled.h4`
 
 export const AboutText = styled.p`
   color: #35363a;
+  font-size: 1.1rem;
   text-align: justify;
+  margin-bottom: 1rem;
 `

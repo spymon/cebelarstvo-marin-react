@@ -4,7 +4,7 @@ import { HeadingH2 } from '../HeadingH2'
 
 export const Gallery = () => {
   return (
-    <Container dark={1} id="gallery">
+    <Container dark id="gallery">
       <HeadingH2>Galerija</HeadingH2>
     </Container>
   )
