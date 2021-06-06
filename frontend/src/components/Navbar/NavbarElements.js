@@ -121,6 +121,7 @@ export const NavBtnLink = styled(LinkR)`
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-decoration: none;
+  box-shadow: 0 3px 10px rgba(51, 51, 51, 0.2);
   outline: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
