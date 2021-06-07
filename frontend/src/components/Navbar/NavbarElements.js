@@ -11,6 +11,7 @@ export const Nav = styled.nav`
   align-items: center;
   font-size: 1rem;
   border-bottom: 3px solid #f7d433;
+  padding: 0 2rem;
   box-shadow: 0 3px 10px rgba(51, 51, 51, 0.2);
   position: sticky;
   top: 0;
@@ -32,7 +33,6 @@ export const NavbarContainer = styled.div`
 
 // react router link
 export const NavLogoWrapper = styled(LinkR)`
-  justify-self: flex-start;
   cursor: pointer;
   font-size: 1.1rem;
   display: flex;
@@ -71,6 +71,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
+  padding: 0;
 
   @media Screen and (max-width: 768px) {
     display: none;
@@ -91,6 +92,7 @@ export const NavLinks = styled(LinkS)`
   text-decoration: none;
   text-transform: capitalize;
   padding: 0.5rem 1rem;
+  white-space: nowrap;
   cursor: pointer;
   border-bottom: 3px solid transparent;
   transition: all 0.1s ease-in-out;

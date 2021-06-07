@@ -60,7 +60,7 @@ export const Sidebar = ({ toggle, isOpen }) => {
           </SidebarLink>
         </SidebarMenu>
         <SidebarBtnWrapper>
-          <SidebarRoute to="/signin">Prijavi se</SidebarRoute>
+          <SidebarRoute to="/login">Prijavi se</SidebarRoute>
         </SidebarBtnWrapper>
       </SidebarWrapper>
     </SidebarContainer>

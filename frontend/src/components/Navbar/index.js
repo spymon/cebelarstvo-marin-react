@@ -25,74 +25,72 @@ export const Navbar = ({ toggle }) => {
     })
 
   return (
-    <>
-      <Nav>
-        <NavbarContainer>
-          <NavLogoWrapper to="/" onClick={toggleHome}>
-            <NavLogoImg src={logoImage} alt="Cebelarstvo marin" />
-          </NavLogoWrapper>
-          <MobileIcon onClick={toggle}>
-            <GoThreeBars />
-          </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks
-                to="products"
-                activeClass="active"
-                smooth={true}
-                duration={300}
-                spy={true}
-                exact="true"
-                offset={-100}
-              >
-                Izdelki
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="gallery"
-                activeClass="active"
-                smooth={true}
-                duration={300}
-                spy={true}
-                exact="true"
-                offset={-100}
-              >
-                Galerija
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="about"
-                activeClass="active"
-                smooth={true}
-                duration={300}
-                spy={true}
-                exact="true"
-                offset={-100}
-              >
-                O Meni
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="contact"
-                activeClass="active"
-                smooth={true}
-                duration={300}
-                spy={true}
-                exact="true"
-                offset={-100}
-              >
-                Kontakt
-              </NavLinks>
-            </NavItem>
-          </NavMenu>
-          <NavBtn>
-            <NavBtnLink to="/signin">prijavi se</NavBtnLink>
-          </NavBtn>
-        </NavbarContainer>
-      </Nav>
-    </>
+    <Nav>
+      <NavbarContainer>
+        <NavLogoWrapper to="/" onClick={toggleHome}>
+          <NavLogoImg src={logoImage} alt="Cebelarstvo marin" />
+        </NavLogoWrapper>
+        <MobileIcon onClick={toggle}>
+          <GoThreeBars />
+        </MobileIcon>
+        <NavMenu>
+          <NavItem>
+            <NavLinks
+              to="products"
+              activeClass="active"
+              smooth={true}
+              duration={300}
+              spy={true}
+              exact="true"
+              offset={-100}
+            >
+              Izdelki
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
+              to="gallery"
+              activeClass="active"
+              smooth={true}
+              duration={300}
+              spy={true}
+              exact="true"
+              offset={-100}
+            >
+              Galerija
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
+              to="about"
+              activeClass="active"
+              smooth={true}
+              duration={300}
+              spy={true}
+              exact="true"
+              offset={-100}
+            >
+              O Meni
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
+              to="contact"
+              activeClass="active"
+              smooth={true}
+              duration={300}
+              spy={true}
+              exact="true"
+              offset={-100}
+            >
+              Kontakt
+            </NavLinks>
+          </NavItem>
+        </NavMenu>
+        <NavBtn>
+          <NavBtnLink to="/login">prijavi se</NavBtnLink>
+        </NavBtn>
+      </NavbarContainer>
+    </Nav>
   )
 }
