@@ -47,11 +47,11 @@ export const FormWrapper = styled.form`
   box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
 `
 
-export const ForumControl = styled.div`
+export const FormControl = styled.div`
   width: 100%;
 `
 
-export const ForumText = styled.p`
+export const FormText = styled.p`
   color: #fff;
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -59,13 +59,14 @@ export const ForumText = styled.p`
   padding-bottom: 1rem;
 `
 
-export const ForumLabel = styled.label`
+export const FormLabel = styled.label`
   width: 100%;
-  color: #fff;
+  color: ${({ darkColor }) => (darkColor ? '#35363a' : '#fff')};
   font-size: 1.1rem;
 `
 
-export const ForumInput = styled.input`
+export const FormInput = styled.input`
+  background-color: ${({ lightGray }) => (lightGray ? '#E5E5E5' : '#fff')};
   width: 100%;
   padding: 10px;
   font-size: 1rem;
@@ -76,7 +77,20 @@ export const ForumInput = styled.input`
   outline-color: #f7d433;
 `
 
-export const ForumBtn = styled.button`
+export const FormTextArea = styled.textarea`
+  width: 100%;
+  min-height: 5rem;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 1rem;
+  resize: vertical;
+  outline-color: #f7d433;
+`
+
+export const FormBtn = styled.button`
   width: 100%;
   color: #35363a;
   background-color: #f7d433;

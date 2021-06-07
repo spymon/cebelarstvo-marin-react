@@ -3,7 +3,7 @@ import { Container } from '../Container'
 import { ContentWrapper } from '../ContentWrapper'
 import { HeadingH2 } from '../HeadingH2'
 import { ContactCard } from './ContactCard'
-import { ContactForum } from './ContactForum'
+import { ContactForm } from './ContactForm'
 
 export const ContactSection = () => {
   return (
@@ -12,7 +12,7 @@ export const ContactSection = () => {
         <HeadingH2>Kontakt</HeadingH2>
         <ContentWrapper>
           <ContactCard />
-          <ContactForum />
+          <ContactForm />
         </ContentWrapper>
       </Container>
     </div>
