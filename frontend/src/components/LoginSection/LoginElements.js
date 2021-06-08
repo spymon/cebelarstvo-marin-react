@@ -39,14 +39,3 @@ export const RegistrationBtn = styled(Link)`
   text-decoration: underline;
   margin-left: 10px;
 `
-
-export const StatusMessage = styled.div`
-  width: 100%;
-  color: red;
-  text-align: start;
-  font-size: 0.875rem;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  padding: 5px 10px;
-  background-color: #ffcece;
-`

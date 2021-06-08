@@ -19,9 +19,10 @@ import {
   AccountInfoHeading,
   AccountInfoWelcomeText,
   RegistrationBtn,
-  StatusMessage,
   TextWrapper,
 } from './LoginElements'
+/* import { MessageBox } from '../MessageBox'
+import LoadingBox from '../LoadingBox' */
 
 export const LoginSection = () => {
   return (
@@ -42,7 +43,8 @@ export const LoginSection = () => {
               nakup.
             </AccountInfoWelcomeText>
 
-            <StatusMessage>Something Wrong!</StatusMessage>
+            {/* <MessageBox></MessageBox> */}
+            {/* <LoadingBox /> */}
 
             <FormControl>
               <FormLabel darkColor>Email:</FormLabel>
