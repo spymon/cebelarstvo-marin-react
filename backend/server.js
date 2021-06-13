@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 //Route Middleware
-app.use('/products', productRoute)
+app.use('/api/products', productRoute)
 
 app.listen(PORT, () => {
   console.log(`listening on port: ${PORT}`)
