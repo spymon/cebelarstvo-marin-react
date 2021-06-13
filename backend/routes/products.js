@@ -11,11 +11,11 @@ router.get('/', async (req, res) => {
   }
 })
 
-//Get one products
+//Get one product
 router.get('/:id', async (req, res) => {
   try {
-    const products = await Product.findById({ _id: req.params.id })
-    res.send(products)
+    const product = await Product.findById({ _id: req.params.id })
+    res.send(product)
   } catch (error) {
     res.status(400).send(error)
   }
