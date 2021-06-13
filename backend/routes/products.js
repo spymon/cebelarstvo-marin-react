@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const Product = require('../models/Product')
+const Product = require('../models/ProductModel')
 
 //Get all products
 router.get('/', async (req, res) => {
@@ -25,6 +25,8 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   const { name, description, weight, price, countInStock } = req.body
 
+  console.log(req.name)
+
   //Creating new Product
   const product = new Product({
     name,
@@ -33,6 +35,8 @@ router.post('/', async (req, res) => {
     price,
     countInStock,
   })
+
+  console.log(product)
 
   //Save Product
   try {

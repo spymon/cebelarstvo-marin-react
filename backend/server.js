@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 const connectDB = require('./config/db')
 
@@ -12,7 +13,8 @@ const PORT = process.env.PORT || 5000
 const productRoute = require('./routes/products')
 
 //Middleware
-/* app.use(bodyParser.json()) */
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 //Route Middleware
 app.use('/products', productRoute)
