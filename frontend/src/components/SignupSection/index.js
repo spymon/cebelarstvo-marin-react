@@ -12,6 +12,8 @@ import {
   NavbarContainer,
   NavLogoImg,
   NavLogoWrapper,
+  NavBtn,
+  NavBtnLink,
 } from '../Navbar/NavbarElements'
 import logoImage from '../../images/CebelarstvoMarin_logotip.jpg'
 import {
@@ -32,6 +34,9 @@ export const SignupSection = () => {
           <NavLogoWrapper to="/">
             <NavLogoImg src={logoImage} alt="Cebelarstvo marin" />
           </NavLogoWrapper>
+          <NavBtn>
+            <NavBtnLink to="/login">Prijavite se</NavBtnLink>
+          </NavBtn>
         </NavbarContainer>
       </Nav>
       <Container center>
