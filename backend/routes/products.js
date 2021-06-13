@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const Product = require('../model/Product')
+const Product = require('../models/Product')
 
 //Get all products
 router.get('/', async (req, res) => {
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 //Get one products
 router.get('/:id', async (req, res) => {
   try {
-    const products = await Product.findById({_id: req.params.id})
+    const products = await Product.findById({ _id: req.params.id })
     res.send(products)
   } catch (error) {
     res.status(400).send(error)
@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
 
 //Create product
 router.post('/', async (req, res) => {
-  const {name, description, weight, price, quantity, } = req.body
+  const { name, description, weight, price, countInStock } = req.body
 
   //Creating new Product
   const product = new Product({
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
     description,
     weight,
     price,
-    quantity
+    countInStock,
   })
 
   //Save Product
