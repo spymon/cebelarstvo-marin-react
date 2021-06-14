@@ -56,16 +56,8 @@ export const SignupSection = () => {
               <FormInput lightGray type="text" />
             </FormControl>
             <FormControl>
-              <FormLabel darkColor>Priimek:</FormLabel>
-              <FormInput lightGray type="text" />
-            </FormControl>
-            <FormControl>
               <FormLabel darkColor>Email:</FormLabel>
               <FormInput lightGray type="email" />
-            </FormControl>
-            <FormControl>
-              <FormLabel darkColor>Telefon:</FormLabel>
-              <FormInput lightGray type="text" />
             </FormControl>
             <FormControl>
               <FormLabel darkColor>Geslo:</FormLabel>
