@@ -10,7 +10,8 @@ connectDB()
 const PORT = process.env.PORT || 5000
 
 //Import Routes
-const productRoute = require('./routes/products')
+const productRoute = require('./routes/productRouter')
+const userRoute = require('./routes/userRouter')
 
 //Middleware
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -18,6 +19,7 @@ app.use(bodyParser.json())
 
 //Route Middleware
 app.use('/api/products', productRoute)
+app.use('/api/users', userRoute)
 
 app.listen(PORT, () => {
   console.log(`listening on port: ${PORT}`)
