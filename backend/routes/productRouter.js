@@ -3,7 +3,7 @@ const {
   getAllProducts,
   getProductById,
   createProduct,
-} = require('../controller/ProductControllers')
+} = require('../controllers/ProductControllers')
 
 // desc   GET all products from DB
 // route  GET /api/products
