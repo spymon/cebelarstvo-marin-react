@@ -1,5 +1,6 @@
 const User = require('../models/UserModel')
 const bcrypt = require('bcryptjs')
+const { generateToken } = require('../utils/auth')
 
 //Register User
 const createNewUser = async (req, res) => {
@@ -13,9 +14,16 @@ const createNewUser = async (req, res) => {
     })
 
     const createdUser = await user.save()
-    res.send(createdUser)
-  } catch (err) {
-    res.send(err)
+
+    res.status(201).send({
+      _id: createdUser._id,
+      name: createdUser.name,
+      email: createdUser.email,
+      isAdmin: createdUser.isAdmin,
+      token: generateToken(createdUser),
+    })
+  } catch (error) {
+    res.status(500).send({ message: 'Server Error' })
   }
 }
 
@@ -29,11 +37,12 @@ const loginUser = async (req, res) => {
       //Compare if the passwords match
       if (bcrypt.compareSync(password, user.password)) {
         //if the passwords match then return object with user info
-        res.send({
+        res.status(200).send({
           _id: user._id,
           name: user.name,
           email: user.email,
           isAdmin: user.isAdmin,
+          token: generateToken(user),
         })
       } else {
         res.status(401).send({ message: 'Invalid email or password' })
@@ -42,7 +51,7 @@ const loginUser = async (req, res) => {
       res.status(401).send({ message: 'Invalid email or password' })
     }
   } catch (error) {
-    res.send(error)
+    res.status(500).send({ message: 'Server Error' })
   }
 }
 
