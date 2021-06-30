@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 import {
   FormBtn,
   FormControl,
@@ -27,6 +28,30 @@ import {
 import LoadingBox from '../LoadingBox' */
 
 export const SignupSection = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+    if (password !== confirmPassword) {
+      alert('Ponovno geslo se ne ujema.')
+    } else {
+      const newUser = {
+        name,
+        email,
+        password,
+        confirmPassword,
+      }
+      try {
+        const { data } = axios.post('/api/users/register', newUser)
+        console.log(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
   return (
     <>
       <Nav>
@@ -41,7 +66,7 @@ export const SignupSection = () => {
       </Nav>
       <Container center>
         <ContentWrapper oneColumn>
-          <AccountInfoForm>
+          <AccountInfoForm onSubmit={handleSubmit}>
             <AccountInfoHeading>Registracija</AccountInfoHeading>
             <AccountInfoWelcomeText>
               Dobrodošli! <br /> Ustvarite račun, za nakupovanje naših izdelkov.
@@ -53,19 +78,39 @@ export const SignupSection = () => {
 
             <FormControl>
               <FormLabel darkColor>Ime:</FormLabel>
-              <FormInput lightGray type="text" />
+              <FormInput
+                lightGray
+                type="text"
+                required
+                onChange={e => setName(e.target.value)}
+              />
             </FormControl>
             <FormControl>
               <FormLabel darkColor>Email:</FormLabel>
-              <FormInput lightGray type="email" />
+              <FormInput
+                lightGray
+                type="email"
+                required
+                onChange={e => setEmail(e.target.value)}
+              />
             </FormControl>
             <FormControl>
               <FormLabel darkColor>Geslo:</FormLabel>
-              <FormInput lightGray type="password" />
+              <FormInput
+                lightGray
+                type="password"
+                required
+                onChange={e => setPassword(e.target.value)}
+              />
             </FormControl>
             <FormControl>
               <FormLabel darkColor>Ponovno geslo:</FormLabel>
-              <FormInput lightGray type="password" />
+              <FormInput
+                lightGray
+                type="password"
+                required
+                onChange={e => setConfirmPassword(e.target.value)}
+              />
             </FormControl>
             <FormControl>
               <FormBtn>Registracija</FormBtn>
