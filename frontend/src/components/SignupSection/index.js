@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import { useDispatch } from 'react-redux'
 import {
   FormBtn,
   FormControl,
@@ -24,6 +24,7 @@ import {
   RegistrationBtn,
   TextWrapper,
 } from '../LoginSection/LoginElements'
+import { register } from '../../redux/User/user.actions'
 /* import { MessageBox } from '../MessageBox'
 import LoadingBox from '../LoadingBox' */
 
@@ -33,23 +34,14 @@ export const SignupSection = () => {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
+  const dispatch = useDispatch()
+
   const handleSubmit = async e => {
     e.preventDefault()
     if (password !== confirmPassword) {
       alert('Ponovno geslo se ne ujema.')
     } else {
-      const newUser = {
-        name,
-        email,
-        password,
-        confirmPassword,
-      }
-      try {
-        const { data } = axios.post('/api/users/register', newUser)
-        console.log(data)
-      } catch (error) {
-        console.log(error)
-      }
+      dispatch(register(name, email, password))
     }
   }
   return (
