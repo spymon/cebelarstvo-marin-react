@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   FormBtn,
   FormControl,
@@ -23,10 +23,24 @@ import {
   RegistrationBtn,
   TextWrapper,
 } from './LoginElements'
+import axios from 'axios'
 /* import { MessageBox } from '../MessageBox'
 import LoadingBox from '../LoadingBox' */
 
 export const LoginSection = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+    try {
+      const { data } = axios.post('/api/users/login', { email, password })
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <>
       <Nav>
@@ -41,7 +55,7 @@ export const LoginSection = () => {
       </Nav>
       <Container center>
         <ContentWrapper oneColumn>
-          <AccountInfoForm>
+          <AccountInfoForm onSubmit={handleSubmit}>
             <AccountInfoHeading>Prijava</AccountInfoHeading>
             <AccountInfoWelcomeText>
               Dobrodošli nazaj! <br /> Prijavite se, da lahko opravite spletni
@@ -53,11 +67,21 @@ export const LoginSection = () => {
 
             <FormControl>
               <FormLabel darkColor>Email:</FormLabel>
-              <FormInput lightGray type="email" />
+              <FormInput
+                lightGray
+                type="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
             </FormControl>
             <FormControl>
               <FormLabel darkColor>Geslo:</FormLabel>
-              <FormInput lightGray type="password" />
+              <FormInput
+                lightGray
+                type="password"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+              />
             </FormControl>
             <FormControl>
               <FormBtn>Prijava</FormBtn>
