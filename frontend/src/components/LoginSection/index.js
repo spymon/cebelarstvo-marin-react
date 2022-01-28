@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   FormBtn,
   FormControl,
@@ -23,22 +24,21 @@ import {
   RegistrationBtn,
   TextWrapper,
 } from './LoginElements'
-import axios from 'axios'
-/* import { MessageBox } from '../MessageBox'
-import LoadingBox from '../LoadingBox' */
+import { MessageBox } from '../MessageBox'
+import LoadingBox from '../LoadingBox'
+import { signin } from '../../redux/User/user.actions'
 
 export const LoginSection = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  const userSignin = useSelector(state => state.userSignin)
+  const { loading, userInfo, error } = userSignin
+  const dispatch = useDispatch()
+
   const handleSubmit = async e => {
     e.preventDefault()
-    try {
-      const { data } = axios.post('/api/users/login', { email, password })
-      console.log(data)
-    } catch (error) {
-      console.log(error)
-    }
+    dispatch(signin(email, password))
   }
 
   return (
@@ -62,14 +62,15 @@ export const LoginSection = () => {
               nakup.
             </AccountInfoWelcomeText>
 
-            {/* <MessageBox></MessageBox> */}
-            {/* <LoadingBox /> */}
+            {error && <MessageBox error>{error}</MessageBox>}
+            {loading && <LoadingBox />}
 
             <FormControl>
               <FormLabel darkColor>Email:</FormLabel>
               <FormInput
                 lightGray
                 type="email"
+                required
                 value={email}
                 onChange={e => setEmail(e.target.value)}
               />
@@ -79,6 +80,7 @@ export const LoginSection = () => {
               <FormInput
                 lightGray
                 type="password"
+                required
                 value={password}
                 onChange={e => setPassword(e.target.value)}
               />

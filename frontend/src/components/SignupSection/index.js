@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   FormBtn,
   FormControl,
@@ -25,8 +25,8 @@ import {
   TextWrapper,
 } from '../LoginSection/LoginElements'
 import { register } from '../../redux/User/user.actions'
-/* import { MessageBox } from '../MessageBox'
-import LoadingBox from '../LoadingBox' */
+import { MessageBox } from '../MessageBox'
+import LoadingBox from '../LoadingBox'
 
 export const SignupSection = () => {
   const [name, setName] = useState('')
@@ -34,6 +34,8 @@ export const SignupSection = () => {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
+  const userRegister = useSelector(state => state.userRegister)
+  const { error, loading } = userRegister
   const dispatch = useDispatch()
 
   const handleSubmit = async e => {
@@ -64,9 +66,9 @@ export const SignupSection = () => {
               Dobrodošli! <br /> Ustvarite račun, za nakupovanje naših izdelkov.
             </AccountInfoWelcomeText>
 
-            {/* <MessageBox></MessageBox> */}
+            {error && <MessageBox error>{error}</MessageBox>}
 
-            {/* <LoadingBox /> */}
+            {loading && <LoadingBox />}
 
             <FormControl>
               <FormLabel darkColor>Ime:</FormLabel>
