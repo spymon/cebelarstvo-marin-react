@@ -36,8 +36,8 @@ Install the backend dependencies in the root folder with npm
 Move to the /frontend folder and install the frontend dependencies with npm
 
 ```bash
-  npm install 
   cd frontend
+  npm install 
 ```
 
 Move back to the root folder to start the servers
@@ -48,7 +48,7 @@ Move back to the root folder to start the servers
     
 ## Deployment
 
-Run the dev script to start the frontend and the backend servers at once
+Run the "dev" script to start the frontend and the backend servers at once
 
 ```bash
   npm run dev
