@@ -18,8 +18,8 @@ export const HeroSection = () => {
         <ImageBg src={heroBackground} />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Med, katerega si želi ti!</HeroH1>
-        <HeroP>Velika izbira medenih izdelkov, pridelanih doma.</HeroP>
+        <HeroH1>Najslajše dobrote, naše dežele</HeroH1>
+        <HeroP>Velika ponudba, za vse sladokusce </HeroP>
         <HeroBtnWrapper>
           <Button
             to="products"

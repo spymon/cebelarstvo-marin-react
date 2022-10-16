@@ -9,6 +9,10 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+  "browserslist": [
+    "defaults and supports es6-module",
+    "maintained node versions"
+  ],
   "author": "Simon Žižek",
   "license": "ISC",
   "dependencies": {
