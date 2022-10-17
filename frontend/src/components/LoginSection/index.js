@@ -25,7 +25,7 @@ import {
   TextWrapper,
 } from './LoginElements'
 import { MessageBox } from '../MessageBox'
-import LoadingBox from '../LoadingBox'
+import { LoadingBox } from '../LoadingBox'
 import { signin } from '../../redux/User/user.actions'
 
 export const LoginSection = () => {

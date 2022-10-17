@@ -32,7 +32,7 @@ export const ProductName = styled.h3`
 `
 
 export const ProductMass = styled.p`
-  padding: 0.5rem 0 1.5rem;
+  margin-bottom: 0.25rem;
   color: #777;
 `
 
@@ -55,4 +55,17 @@ export const ProductBtn = styled.button`
   &:hover {
     transform: scale(1.02);
   }
+`
+
+export const ProductDescription = styled.p`
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
+  font-style: italic;
+  text-align: center;
+`
+
+export const ProductPrice = styled.p`
+  font-size: 2rem;
+
+  margin-bottom: 0.25rem;
 `

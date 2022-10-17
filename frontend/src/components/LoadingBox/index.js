@@ -6,7 +6,7 @@ import {
 } from './LoadingBoxElement'
 import beeIcon from '../../images/bee_icon.png'
 
-export default function LoadingBox() {
+export const LoadingBox = () => {
   return (
     <LoadingContainer>
       <LoadingIconWrapper>

@@ -26,7 +26,7 @@ import {
 } from '../LoginSection/LoginElements'
 import { register } from '../../redux/User/user.actions'
 import { MessageBox } from '../MessageBox'
-import LoadingBox from '../LoadingBox'
+import { LoadingBox } from '../LoadingBox'
 
 export const SignupSection = () => {
   const [name, setName] = useState('')
