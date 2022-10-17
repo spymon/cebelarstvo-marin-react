@@ -1,37 +1,21 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Container } from '../Container'
 import { HeadingH2 } from '../HeadingH2'
 import { ProductCard } from '../ProductCard'
 import { ProductsWrapper } from './ProductElements'
 import { LoadingBox } from '../LoadingBox'
 import { MessageBox } from '../MessageBox'
-
-import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { listProducts } from '../../redux/Product/product.actions'
 
 export const ProductSection = () => {
-  const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
+  const productList = useSelector(state => state.productList)
+  const { products, loading, error } = productList
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true)
-      try {
-        const { data } = await axios.get('/api/products')
-        setLoading(false)
-        setProducts(data)
-      } catch (error) {
-        setError(error.message)
-        setLoading(false)
-      }
-
-      setLoading(false)
-    }
-    fetchData()
-  }, [])
-
-  console.table(products)
+    dispatch(listProducts())
+  }, [dispatch])
 
   return (
     <Container id="products">
