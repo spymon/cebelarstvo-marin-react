@@ -45,8 +45,6 @@ Move back to the root folder to start the servers
 ```bash
   cd ..
 ```
-    
-## Deployment
 
 Run the "dev" script to start the frontend and the backend servers at once
 
